@@ -24,3 +24,12 @@ body {
     -ms-user-select: none;
     user-select: none;
 }
+
+#car{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 250px;
+}
