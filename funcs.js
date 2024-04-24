@@ -20,3 +20,18 @@ function drawLine(line) {
     ctx.lineTo(line.end.x, line.end.y);
     ctx.stroke();
 }
+
+function eulerRotation(angle, x, y) {
+    //console.log(angle,x,y)
+    let theta = degreesToRadians(angle);
+
+    let cs = Math.cos(theta);
+    let sn = Math.sin(theta);
+    px = x * cs - y * sn;
+    py = x * sn + y * cs;
+    return { "x": px, "y": py };
+}
+
+function degreesToRadians(degrees) {
+    return degrees * Math.PI / 180;
+}

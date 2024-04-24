@@ -31,19 +31,24 @@ class Line {
         }
     }
 }
+class Marker {
+    constructor(anchor = new Vector2(0, 0), position = new Vector2(1, 0), color = "red", diameter = 20) {
+        this.anchor = anchor;
+        this.position = position;
+        this.color = color;
+        this.diameter = diameter;
 
-class Box {
-    constructor(stroke = true, fill = true, fillcolor = "red", start = new Vector2(20, 20), end = new Vector2(400, 400)) {
-        this.stroke = stroke;
-        this.fill = fill;
-        this.fillcolor = fillcolor;
-        this.top = new Line(new Vector2(start.x, start.y), new Vector2(end.x, start.y), false);
-        this.right = new Line(new Vector2(end.x, start.y), new Vector2(end.x, end.y), true);
-        this.bottom = new Line(new Vector2(end.x, end.y), new Vector2(start.x, end.y), true);
-        this.bottom.normal = multiplyVector(this.bottom.normal, new Vector2(-1, 1))
-        this.left = new Line(new Vector2(start.x, end.y), new Vector2(start.x, start.y), true);
-        this.start = start;
-        this.end = end;
-        this.sides = [this.top, this.right, this.bottom, this.left]
+        let marker = document.createElement("div")
+        marker.className = "marker"
+        marker.style.backgroundColor = color
+        marker.style.zIndex = 120
+        marker.style.left = `${position.x}px`
+        marker.style.top = `${position.y}px`
+
+        marker.style.width = `${diameter}px`
+        marker.style.height = `${diameter}px`
+
+        document.body.appendChild(marker)
+        this.HTMLElement = marker;
     }
 }
