@@ -33,3 +33,10 @@ body {
     transform: translate(-50%, -50%);
     height: 250px;
 }
+
+
+#angle{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
