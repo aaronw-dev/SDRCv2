@@ -19,7 +19,7 @@ ctx.lineJoin = "round";
 const marker1 = createMarker("red", 20, new Vector2(halfWidth, halfHeight + 250))
 const marker2 = createMarker("green", 20, new Vector2(halfWidth + 120, halfHeight + 200))
 const marker3 = createMarker("green", 20, new Vector2(halfWidth - 120, halfHeight + 200))
-const marker4 = createMarker("red", 20, new Vector2(halfWidth, halfHeight - 250))
+const marker4 = createMarker("skyblue", 20, new Vector2(halfWidth, halfHeight - 250))
 
 ctx.stroke();
 window.addEventListener("resize", () => {
